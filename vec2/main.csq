@@ -1,0 +1,29 @@
+include mem::*;
+include stdio::*;
+
+type vec2_t = struct {
+  int x;
+  int y;
+};
+
+namespace vec2;
+
+vec2_t*! vec2::new(int x, int y) {
+  vec2 v = try new(vec2);
+  v.x = x;
+  v.y = y;
+
+  return v;
+}
+
+void! main() {
+  vec2_t* v = try vec2::new(5, 5);
+  delay try free(v);
+
+  printf("x: %d, y: %d", v.x, v.y); // 5, 5
+  v.x++;
+  v.y--;
+  printf("x: %d, y: %d", v.x, v.y); // 6, 4
+
+  // here 'try free(v)' runs
+}
