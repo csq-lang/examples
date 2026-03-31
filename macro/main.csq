@@ -1,0 +1,11 @@
+include stdio;
+
+#macro println(text)
+    stdio::printf(text "\n")
+#endmacro
+
+
+void! main() {
+    println("Hello, World!");
+}
+

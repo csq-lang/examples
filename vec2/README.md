@@ -12,7 +12,7 @@ propagates errors caused by `new`.
 
 Then, in main, there are three main things that happen:
 - A variable of type `vec2_t*`, called `v`, is declared and the value
-is assigned to `vec2::new(5, 5)`.
-- A delay is made (equivalent of `defer` in Zig) which delays the call
-of `free(v)` to the end of the block.
+is assigned to `vec2::create(5, 5)`.
+- A delay is made (equivalent of `defer` in Zig), which delays the call
+of `delete v` to the end of the block.
 - The X and Y of `v` are printed, modified and then printed again.
