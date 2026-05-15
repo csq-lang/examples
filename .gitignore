@@ -1,0 +1,13 @@
+# Ignore everything
+*
+
+# But not directories
+!*/
+
+# Allow these file types
+!*.hl
+!*.md
+
+# Allow these specific files
+!LICENSE
+!.gitignore
